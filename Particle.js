@@ -39,7 +39,7 @@ class Particle {
     ellipse(this.pos.x, this.pos.y, this.w, this.w);
 
     if(this.pos.x > width) {
-      this.w = this.w * -0.9
+      this.w = this.w * 1.1
     }
   }
 }
