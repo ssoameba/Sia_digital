@@ -50,6 +50,7 @@ class Particle {
     } else if (this.pos.x <= this.wall) {
       this.vel.x = this.vel.x * -1;
       this.pos.x = this.wall;
+      this.score = this.score + 1;
     }
   }
 
