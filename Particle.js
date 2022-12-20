@@ -13,6 +13,9 @@ class Particle {
 
     this.w = 50;
     this.wall = 45;
+
+   this.score = 0;
+
   }
 
   addForce(aForce) {
@@ -29,6 +32,11 @@ class Particle {
 
 
   checkEdge() {
+
+    fill(0);
+  textSize(30);
+  text("Age : ", 200, 50);
+
     if (this.pos.y >= height - this.w/2) {
       this.vel.y = this.vel.y * -1;
       this.pos.y = height - this.w/2;
