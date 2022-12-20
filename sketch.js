@@ -17,7 +17,7 @@ function draw() {
   rect(width-20, 0, width, height);
 
   if (mouseIsPressed){
-    let wind = createVector(0.1, 0);
+    let wind = createVector(-0.1, 0);
     ball.addForce(wind);
   }
   let gravity = createVector(0, 0.2);
