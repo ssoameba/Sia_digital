@@ -47,12 +47,12 @@ class Particle {
     fill(this.r, this.g, this.b);
     ellipse(this.pos.x, this.pos.y, this.w, this.w);
 
-    if(this.pos.x >= width) {
+    if(this.pos.x >= width - this.wall) {
       this.w = this.w * 1.1;
       this.r = random(255);
       this.g = random(255);
       this.b = random(255);
-    } else if(this.pos.x <= 0) {
+    } else if(this.pos.x <= this.wall) {
       this.w = this.w * 1.1;
       this.r = random(255);
       this.g = random(255);
