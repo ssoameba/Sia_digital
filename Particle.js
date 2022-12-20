@@ -53,6 +53,9 @@ class Particle {
       this.b = random(255);
     } else if(this.pos.x <= 0) {
       this.w = this.w * 1.1;
+      this.r = random(255);
+      this.g = random(255);
+      this.b = random(255);
     }
   }
 }
