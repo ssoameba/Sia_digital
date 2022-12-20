@@ -10,10 +10,9 @@ function setup() {
 function draw() {
   background(220);
 
+  noStroke(0);
   fill (0);
   rect(0, 0, 20, height);
-  noStroke();
-
   fill(255);
   rect(width-20, 0, width, height);
 

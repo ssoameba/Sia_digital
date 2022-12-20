@@ -11,6 +11,7 @@ class Particle {
     this.b = random(255);
 
     this.w = 50;
+    this.wall = 45;
   }
 
   addForce(aForce) {
@@ -27,17 +28,17 @@ class Particle {
 
 
   checkEdge() {
-    if (this.pos.y >= height) {
+    if (this.pos.y >= height - this.w/2) {
       this.vel.y = this.vel.y * -1;
-      this.pos.y = height;
+      this.pos.y = height - this.w/2;
     }
     
-    if (this.pos.x >= width) {
+    if (this.pos.x >= width - this.wall) {
       this.vel.x = this.vel.x * -1;
-      this.pos.x = width;
-    } else if (this.pos.x <= 0) {
+      this.pos.x = width - this.wall;
+    } else if (this.pos.x <= this.wall) {
       this.vel.x = this.vel.x * -1;
-      this.pos.x = 0;
+      this.pos.x = this.wall;
     }
   }
 
