@@ -10,10 +10,13 @@ function setup() {
 function draw() {
   background(220);
 
+  if (mouseIsPressed){
+    let wind = createVector(0.01, 0);
+    ball.addForce(wind);
+  }
   let gravity = createVector(0, 0.1);
   ball.addForce(gravity);
-  let wind = createVector(0.01, 0);
-  ball.addForce(wind);
+
 
   ball.update();
   ball.show();
