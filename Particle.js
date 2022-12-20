@@ -4,7 +4,12 @@ class Particle {
     this.vel = createVector(0, 0);
     this.acc = createVector(0, 0);
 
-    this.c = color(0);
+ //   this.c = color(0);
+    
+    this.r = random(255);
+    this.g = random(255);
+    this.b = random(255);
+
     this.w = 50;
   }
 
@@ -38,11 +43,14 @@ class Particle {
 
 
   show() {
-    fill(this.c);
+    fill(this.r, this.g, this.b);
     ellipse(this.pos.x, this.pos.y, this.w, this.w);
 
     if(this.pos.x >= width) {
       this.w = this.w * 1.1;
+      this.r = random(255);
+      this.g = random(255);
+      this.b = random(255);
     } else if(this.pos.x <= 0) {
       this.w = this.w * 1.1;
     }
