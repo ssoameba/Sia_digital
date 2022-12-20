@@ -10,11 +10,12 @@ function setup() {
 function draw() {
   background(220);
 
-  fill (255);
-  rect(0, 0, 10, height);
+  fill (0);
+  rect(0, 0, 20, height);
+  noStroke();
 
-  fill(0);
-  rect(width-10, 0, width, height);
+  fill(255);
+  rect(width-20, 0, width, height);
 
   if (mouseIsPressed){
     let wind = createVector(0.1, 0);
