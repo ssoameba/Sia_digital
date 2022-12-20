@@ -22,13 +22,13 @@ class Particle {
 
 
   checkEdge() {
-    if (this.pos.y > height) {
+    if (this.pos.y >= height) {
       this.vel.y = this.vel.y * -1;
       this.pos.y = height;
     }
     
     if (this.pos.x >= width) {
-      this.vel.x = this.vel.x * -1
+      this.vel.x = this.vel.x * -1;
       this.pos.x = width;
     } else if (this.pos.x <= 0) {
       this.vel.x = this.vel.x * -1;
@@ -41,8 +41,10 @@ class Particle {
     fill(this.c);
     ellipse(this.pos.x, this.pos.y, this.w, this.w);
 
-    if(this.pos.x > width) {
-      this.w = this.w * 1.1
+    if(this.pos.x >= width) {
+      this.w = this.w * 1.1;
+    } else if(this.pos.x <= 0) {
+      this.w = this.w * 1.1;
     }
   }
 }
