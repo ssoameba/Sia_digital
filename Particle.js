@@ -27,8 +27,11 @@ class Particle {
       this.pos.y = height;
     }
     
-    if (this.pos.x > width) {
+    if (this.pos.x >= width) {
       this.vel.x = this.vel.x * -1
+      this.pos.x = width;
+    } else if (this.pos.x <= 0) {
+      this.vel.x = this.vel.x * -1;
       this.pos.x = 0;
     }
   }
