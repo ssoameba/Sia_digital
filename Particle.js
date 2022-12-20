@@ -23,11 +23,12 @@ class Particle {
 
   checkEdge() {
     if (this.pos.y > height) {
-      this.vel.y = this.vel.y * -0.8;
+      this.vel.y = this.vel.y * -1;
       this.pos.y = height;
     }
     
     if (this.pos.x > width) {
+      this.vel.x = this.vel.x * -1
       this.pos.x = 0;
     }
   }
