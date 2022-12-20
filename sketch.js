@@ -12,6 +12,8 @@ function draw() {
 
   let gravity = createVector(0, 0.1);
   ball.addForce(gravity);
+  let wind = createVector(0.01, 0);
+  ball.addForce(wind);
 
   ball.update();
   ball.show();
