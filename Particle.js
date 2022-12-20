@@ -36,6 +36,7 @@ class Particle {
     fill(0);
   textSize(30);
   text("Age : ", 200, 50);
+  text(this.score, 300, 50);
 
     if (this.pos.y >= height - this.w/2) {
       this.vel.y = this.vel.y * -1;
@@ -45,6 +46,7 @@ class Particle {
     if (this.pos.x >= width - this.wall) {
       this.vel.x = this.vel.x * -1;
       this.pos.x = width - this.wall;
+      this.score = this.score + 1;
     } else if (this.pos.x <= this.wall) {
       this.vel.x = this.vel.x * -1;
       this.pos.x = this.wall;
