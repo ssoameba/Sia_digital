@@ -9,6 +9,7 @@ class Particle {
     this.r = random(255);
     this.g = random(255);
     this.b = random(255);
+    this.a = 30;
 
     this.w = 50;
     this.wall = 45;
@@ -44,7 +45,7 @@ class Particle {
 
 
   show() {
-    fill(this.r, this.g, this.b);
+    fill(this.r, this.g, this.b, this.a);
     ellipse(this.pos.x, this.pos.y, this.w, this.w);
 
     if(this.pos.x >= width - this.wall) {
@@ -52,11 +53,13 @@ class Particle {
       this.r = random(255);
       this.g = random(255);
       this.b = random(255);
+      this.a = this.a * 3
     } else if(this.pos.x <= this.wall) {
       this.w = this.w * 1.1;
       this.r = random(255);
       this.g = random(255);
       this.b = random(255);
+      this.a = this.a * 3;
     }
   }
 }
